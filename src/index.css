@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Clean Blue-White Corporate Palette */
+    --background: 0 0% 100%;
+    --foreground: 213 50% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 50% 15%;
+
+    /* Primary Blue */
+    --primary: 210 80% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light Blue Secondary */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 213 50% 15%;
+
+    /* Muted */
+    --muted: 210 20% 96%;
+    --muted-foreground: 213 15% 45%;
+
+    /* Cyan-Blue Accent */
+    --accent: 199 85% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 80% 48%;
+    --radius: 0.5rem;
+
+    /* Custom Design Tokens */
+    --brand: 210 80% 48%;
+    --brand-light: 210 80% 58%;
+    --brand-dark: 213 70% 35%;
+    --brand-soft: 210 60% 95%;
+    --heading: 213 50% 18%;
+    --text-body: 213 10% 40%;
+    --surface: 210 30% 98%;
+    --surface-alt: 210 25% 97%;
+
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(210 80% 48%), hsl(199 85% 52%));
+    --gradient-hero: linear-gradient(180deg, hsl(213 60% 18%) 0%, hsl(213 50% 25%) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(210 60% 95%), hsl(199 60% 95%));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(213 50% 15% / 0.04);
+    --shadow-md: 0 4px 16px hsl(213 50% 15% / 0.07);
+    --shadow-lg: 0 8px 32px hsl(213 50% 15% / 0.10);
+    --shadow-brand: 0 4px 20px hsl(210 80% 48% / 0.20);
+
+    /* Transitions */
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Typography */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 px-4 md:py-28 md:px-8;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .heading-display {
+    font-family: var(--font-heading);
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    color: hsl(var(--heading));
+  }
+
+  .heading-section {
+    font-family: var(--font-heading);
+    @apply text-3xl md:text-4xl font-semibold;
+    color: hsl(var(--heading));
+  }
+
+  .text-body-lg {
+    @apply text-lg md:text-xl leading-relaxed;
+    color: hsl(var(--text-body));
+  }
+
+  .brand-line {
+    @apply w-16 h-0.5;
+    background: var(--gradient-brand);
+  }
+
+  .card-elevated {
+    @apply rounded-xl bg-card p-6 md:p-8;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold text-sm tracking-wide;
+    background: hsl(var(--brand));
+    color: white;
+    transition: var(--transition-base);
+    letter-spacing: 0.02em;
+  }
+
+  .btn-primary:hover {
+    background: hsl(var(--brand-dark));
+    box-shadow: var(--shadow-brand);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold text-sm tracking-wide border-2;
+    border-color: hsl(var(--brand));
+    color: hsl(var(--brand));
+    transition: var(--transition-base);
+    letter-spacing: 0.02em;
+  }
+
+  .btn-outline:hover {
+    background: hsl(var(--brand));
+    color: white;
+  }
+
+  .number-badge {
+    font-family: var(--font-heading);
+    @apply text-5xl font-bold;
+    color: hsl(var(--brand) / 0.12);
+  }
+
+  .tag-brand {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+    background: hsl(var(--brand-soft));
+    color: hsl(var(--brand-dark));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
