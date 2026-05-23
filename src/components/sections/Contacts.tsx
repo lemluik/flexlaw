@@ -11,12 +11,31 @@ export function Contacts() {
     message: '',
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitted(true)
-    setTimeout(() => setIsSubmitted(false), 3000)
-    setFormState({ name: '', company: '', phone: '', email: '', interest: '', message: '' })
+    setIsLoading(true)
+    setError('')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState),
+      })
+
+      if (!res.ok) throw new Error('Ошибка отправки')
+
+      setIsSubmitted(true)
+      setFormState({ name: '', company: '', phone: '', email: '', interest: '', message: '' })
+      setTimeout(() => setIsSubmitted(false), 5000)
+    } catch {
+      setError('Не удалось отправить заявку. Попробуйте позвонить или написать в Telegram.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -178,9 +197,12 @@ export function Contacts() {
                 className="w-full px-5 py-3.5 bg-white/5 border border-white/15 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-brand/50 focus:ring-1 focus:ring-brand/30 transition-all text-sm resize-none"
               />
             </div>
-            <button type="submit" className="btn-primary w-full">
-              {isSubmitted ? '✓ Заявка отправлена' : 'Отправить заявку'}
+            <button type="submit" disabled={isLoading} className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed">
+              {isLoading ? 'Отправляем...' : isSubmitted ? '✓ Заявка отправлена' : 'Отправить заявку'}
             </button>
+            {error && (
+              <p className="text-xs text-red-400 text-center">{error}</p>
+            )}
             <p className="text-xs text-white/30 text-center">
               Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
             </p>
