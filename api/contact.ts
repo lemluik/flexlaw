@@ -24,6 +24,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const interestLabel = interest ? (interestLabels[interest] || interest) : '—'
 
+  const tgText = `🆕 <b>Новая заявка с сайта flexlaw.net</b>\n\n` +
+    `👤 <b>Имя:</b> ${name}\n` +
+    `🏢 <b>Компания:</b> ${company || '—'}\n` +
+    `📞 <b>Телефон:</b> ${phone}\n` +
+    `📧 <b>Email:</b> ${email || '—'}\n` +
+    `📌 <b>Интересует:</b> ${interestLabel}\n` +
+    `💬 <b>Сообщение:</b> ${message || '—'}`
+
   try {
     await resend.emails.send({
       from: 'Форма сайта <noreply@flexlaw.net>',
@@ -66,6 +74,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         </div>
       `,
     })
+
+    // Отправка в Telegram
+    try {
+      await fetch(`https://api.telegram.org/bot8920511167:AAFcWALs5k4UFV11JWnYOtCvRp9Xh4O9eHU/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: '-5244717778',
+          text: tgText,
+          parse_mode: 'HTML',
+        }),
+      })
+    } catch (tgError) {
+      console.error('Telegram error:', tgError)
+    }
 
     return res.status(200).json({ success: true })
   } catch (error) {
