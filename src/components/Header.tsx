@@ -29,13 +29,14 @@ export function Header() {
       }`}
     >
       <div className="container-narrow flex items-center justify-between">
-        <a
-          href="#"
-          className={`font-heading text-xl font-bold transition-colors ${
-            isScrolled ? 'text-heading' : 'text-white'
-          }`}
-        >
-          Гибкий Закон
+        <a href="#" className="flex items-center">
+          <img
+            src="/images/logo.png"
+            alt="Гибкий Закон"
+            className={`h-10 w-auto rounded-lg transition-all ${
+              isScrolled ? '' : 'bg-white/95 shadow-sm'
+            }`}
+          />
         </a>
 
         {/* Desktop nav */}
