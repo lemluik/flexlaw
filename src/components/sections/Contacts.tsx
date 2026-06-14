@@ -68,8 +68,8 @@ export function Contacts() {
               </div>
               <div>
                 <div className="text-sm text-white/50 mb-1">Телефон / WhatsApp</div>
-                <a href="tel:+996999123456" className="text-white font-medium hover:text-brand transition-colors">
-                  +996 (999) 123-456
+                <a href="tel:+996704149149" className="text-white font-medium hover:text-brand transition-colors">
+                  +996 704 149 149
                 </a>
               </div>
             </div>
@@ -104,8 +104,8 @@ export function Contacts() {
               </div>
               <div>
                 <div className="text-sm text-white/50 mb-1">Telegram</div>
-                <a href="https://t.me/gibkiyzakon" className="text-white font-medium hover:text-brand transition-colors">
-                  @gibkiyzakon
+                <a href="https://t.me/FlexLaw" className="text-white font-medium hover:text-brand transition-colors">
+                  @FlexLaw
                 </a>
               </div>
             </div>
@@ -126,11 +126,11 @@ export function Contacts() {
 
             {/* Quick buttons */}
             <div className="flex flex-wrap gap-3 pt-4">
-              <a href="https://t.me/gibkiyzakon" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand/10 text-brand text-sm font-medium hover:bg-brand/20 transition-colors">
+              <a href="https://t.me/FlexLaw" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand/10 text-brand text-sm font-medium hover:bg-brand/20 transition-colors">
                 <MessageCircle className="w-4 h-4" />
                 Написать в Telegram
               </a>
-              <a href="https://wa.me/996999123456" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand/10 text-brand text-sm font-medium hover:bg-brand/20 transition-colors">
+              <a href="https://wa.me/996704149149" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand/10 text-brand text-sm font-medium hover:bg-brand/20 transition-colors">
                 <MessageCircle className="w-4 h-4" />
                 Написать в WhatsApp
               </a>

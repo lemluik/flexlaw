@@ -5,7 +5,6 @@ import { Services } from '@/components/sections/Services'
 import { HowWeWork } from '@/components/sections/HowWeWork'
 import { Cases } from '@/components/sections/Cases'
 import { Reviews } from '@/components/sections/Reviews'
-import { Blog } from '@/components/sections/Blog'
 import { FAQ } from '@/components/sections/FAQ'
 import { Contacts } from '@/components/sections/Contacts'
 import { Footer } from '@/components/Footer'
@@ -21,7 +20,6 @@ function App() {
         <HowWeWork />
         <Cases />
         <Reviews />
-        <Blog />
         <FAQ />
         <Contacts />
       </main>
