@@ -29,7 +29,7 @@ export function Header() {
       }`}
     >
       <div className="container-narrow flex items-center justify-between">
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center gap-3">
           <img
             src="/images/logo.png"
             alt="Гибкий Закон"
@@ -37,6 +37,13 @@ export function Header() {
               isScrolled ? '' : 'bg-white/95 shadow-sm'
             }`}
           />
+          <span
+            className={`font-heading text-xl font-bold transition-colors ${
+              isScrolled ? 'text-heading' : 'text-white'
+            }`}
+          >
+            Гибкий Закон
+          </span>
         </a>
 
         {/* Desktop nav */}
