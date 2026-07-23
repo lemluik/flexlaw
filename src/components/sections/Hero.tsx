@@ -1,4 +1,4 @@
-export function Hero() {
+﻿export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image with overlay */}
@@ -8,7 +8,7 @@ export function Hero() {
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(213,60%,18%,0.88)] via-[hsl(213,50%,22%,0.85)] to-[hsl(213,60%,18%,0.92)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(213,70%,12%,0.88)] via-[hsl(213,70%,15%,0.85)] to-[hsl(213,70%,12%,0.92)]" />
       </div>
 
       {/* Content */}
@@ -17,7 +17,7 @@ export function Hero() {
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 font-heading tracking-tight text-balance">
           Юридические и
           <br />
-          <span className="text-[hsl(199,85%,55%)]">регистрационные услуги</span>
+          <span className="text-[hsl(22,90%,52%)]">регистрационные услуги</span>
           <br />
           для бизнеса в Кыргызстане
         </h1>
@@ -37,19 +37,19 @@ export function Hero() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-[hsl(199,85%,55%)] font-heading">7+</div>
+            <div className="text-3xl md:text-4xl font-bold text-[hsl(22,90%,52%)] font-heading">7+</div>
             <div className="text-xs md:text-sm text-white/50 mt-1">лет опыта</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-[hsl(199,85%,55%)] font-heading">200+</div>
+            <div className="text-3xl md:text-4xl font-bold text-[hsl(22,90%,52%)] font-heading">200+</div>
             <div className="text-xs md:text-sm text-white/50 mt-1">зарегистрированных компаний</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-[hsl(199,85%,55%)] font-heading">50+</div>
+            <div className="text-3xl md:text-4xl font-bold text-[hsl(22,90%,52%)] font-heading">50+</div>
             <div className="text-xs md:text-sm text-white/50 mt-1">полученных лицензий</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-[hsl(199,85%,55%)] font-heading">95%</div>
+            <div className="text-3xl md:text-4xl font-bold text-[hsl(22,90%,52%)] font-heading">95%</div>
             <div className="text-xs md:text-sm text-white/50 mt-1">клиентов по рекомендации</div>
           </div>
         </div>

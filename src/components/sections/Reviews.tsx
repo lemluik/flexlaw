@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 
 const reviews = [
   {
@@ -48,7 +48,7 @@ export function Reviews() {
             {/* Stars */}
             <div className="flex justify-center gap-1 mb-6">
               {[...Array(reviews[activeIndex].rating)].map((_, i) => (
-                <svg key={i} width="20" height="20" viewBox="0 0 20 20" fill="hsl(210, 80%, 48%)">
+                <svg key={i} width="20" height="20" viewBox="0 0 20 20" fill="hsl(22, 90%, 52%)">
                   <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32-3.87-3.77 5.34-.78L10 1z" />
                 </svg>
               ))}

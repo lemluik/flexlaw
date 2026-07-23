@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,58 +6,58 @@
 
 @layer base {
   :root {
-    /* Clean Blue-White Corporate Palette */
+    /* Navy Blue + Orange Corporate Palette */
     --background: 0 0% 100%;
-    --foreground: 213 50% 15%;
+    --foreground: 213 70% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 213 50% 15%;
+    --card-foreground: 213 70% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 213 50% 15%;
+    --popover-foreground: 213 70% 12%;
 
-    /* Primary Blue */
-    --primary: 210 80% 48%;
+    /* Primary Orange */
+    --primary: 22 90% 52%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Blue Secondary */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 213 50% 15%;
+    /* Light Navy Secondary */
+    --secondary: 213 30% 96%;
+    --secondary-foreground: 213 70% 12%;
 
     /* Muted */
-    --muted: 210 20% 96%;
+    --muted: 213 15% 96%;
     --muted-foreground: 213 15% 45%;
 
-    /* Cyan-Blue Accent */
-    --accent: 199 85% 52%;
+    /* Navy Blue Accent */
+    --accent: 213 70% 20%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 80% 48%;
+    --border: 213 20% 90%;
+    --input: 213 20% 90%;
+    --ring: 22 90% 52%;
     --radius: 0.5rem;
 
     /* Custom Design Tokens */
-    --brand: 210 80% 48%;
-    --brand-light: 210 80% 58%;
-    --brand-dark: 213 70% 35%;
-    --brand-soft: 210 60% 95%;
-    --heading: 213 50% 18%;
+    --brand: 22 90% 52%;
+    --brand-light: 22 90% 62%;
+    --brand-dark: 22 90% 42%;
+    --brand-soft: 22 60% 95%;
+    --heading: 213 70% 15%;
     --text-body: 213 10% 40%;
-    --surface: 210 30% 98%;
-    --surface-alt: 210 25% 97%;
+    --surface: 213 30% 98%;
+    --surface-alt: 213 25% 97%;
 
     /* Gradients */
-    --gradient-brand: linear-gradient(135deg, hsl(210 80% 48%), hsl(199 85% 52%));
-    --gradient-hero: linear-gradient(180deg, hsl(213 60% 18%) 0%, hsl(213 50% 25%) 100%);
-    --gradient-soft: linear-gradient(135deg, hsl(210 60% 95%), hsl(199 60% 95%));
+    --gradient-brand: linear-gradient(135deg, hsl(22 90% 52%), hsl(22 90% 62%));
+    --gradient-hero: linear-gradient(180deg, hsl(213 70% 12%) 0%, hsl(213 70% 20%) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(22 60% 95%), hsl(213 30% 95%));
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px hsl(213 50% 15% / 0.04);
-    --shadow-md: 0 4px 16px hsl(213 50% 15% / 0.07);
-    --shadow-lg: 0 8px 32px hsl(213 50% 15% / 0.10);
-    --shadow-brand: 0 4px 20px hsl(210 80% 48% / 0.20);
+    --shadow-sm: 0 2px 8px hsl(213 70% 12% / 0.04);
+    --shadow-md: 0 4px 16px hsl(213 70% 12% / 0.07);
+    --shadow-lg: 0 8px 32px hsl(213 70% 12% / 0.10);
+    --shadow-brand: 0 4px 20px hsl(22 90% 52% / 0.25);
 
     /* Transitions */
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

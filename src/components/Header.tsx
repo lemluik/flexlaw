@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 
 const navLinks = [
   { href: '#about', label: 'О компании' },
@@ -37,12 +37,9 @@ export function Header() {
               isScrolled ? '' : 'bg-white/95 shadow-sm'
             }`}
           />
-          <span
-            className={`font-heading text-xl font-bold transition-colors ${
-              isScrolled ? 'text-heading' : 'text-white'
-            }`}
-          >
-            Гибкий Закон
+          <span className="font-heading text-xl font-bold transition-colors">
+            <span className={isScrolled ? 'text-heading' : 'text-white'}>ГИБКИЙ </span>
+            <span className={isScrolled ? 'text-primary' : 'text-orange-400'}>ЗАКОН</span>
           </span>
         </a>
 
@@ -52,7 +49,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-brand ${
+              className={`text-sm font-medium transition-colors hover:text-primary ${
                 isScrolled ? 'text-foreground' : 'text-white/90'
               }`}
             >
@@ -74,7 +71,7 @@ export function Header() {
             {isMobileMenuOpen ? (
               <path d="M18 6L6 18M6 6l12 12" />
             ) : (
-              <path d="M3 12h18M3 6h18M3 18h18" />
+              <path d="M3 12h18M3 6t18M3 18h18" />
             )}
           </svg>
         </button>
@@ -89,7 +86,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-sm font-medium text-foreground py-2 hover:text-brand transition-colors"
+                className="text-sm font-medium text-foreground py-2 hover:text-primary transition-colors"
               >
                 {link.label}
               </a>

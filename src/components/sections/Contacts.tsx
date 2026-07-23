@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Send, Clock, MessageCircle } from 'lucide-react'
+﻿import { Phone, Mail, MapPin, Send, Clock, MessageCircle } from 'lucide-react'
 import { useState } from 'react'
 
 export function Contacts() {
@@ -41,7 +41,7 @@ export function Contacts() {
   return (
     <section id="contacts" className="section-padding relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-[hsl(213,50%,18%)]">
+      <div className="absolute inset-0 bg-[hsl(213,70%,12%)]">
         <img
           src="/images/services-bg.png"
           alt=""

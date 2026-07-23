@@ -1,8 +1,8 @@
-export function Footer() {
+﻿export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[hsl(213,50%,12%)] py-10 px-4">
+    <footer className="bg-[hsl(213,70%,12%)] py-10 px-4">
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-heading text-lg font-bold text-white">

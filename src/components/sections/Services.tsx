@@ -1,4 +1,4 @@
-import { Building2, Landmark, FileCheck, RefreshCw, XCircle } from 'lucide-react'
+﻿import { Building2, Landmark, FileCheck, RefreshCw, XCircle } from 'lucide-react'
 
 const mainServices = [
   {
@@ -142,7 +142,7 @@ export function Services() {
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-foreground">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0">
-                      <path d="M11.5 3.5L5.5 9.5L2.5 6.5" stroke="hsl(210, 80%, 48%)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M11.5 3.5L5.5 9.5L2.5 6.5" stroke="hsl(22, 90%, 52%)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     {feature}
                   </li>

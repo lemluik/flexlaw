@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 
 const faqItems = [
   {
@@ -73,7 +73,7 @@ export function FAQ() {
                   height="20"
                   viewBox="0 0 20 20"
                   fill="none"
-                  stroke="hsl(210, 80%, 48%)"
+                  stroke="hsl(22, 90%, 52%)"
                   strokeWidth="1.5"
                   className={`flex-shrink-0 transition-transform duration-200 ${
                     openIndex === index ? 'rotate-180' : ''
