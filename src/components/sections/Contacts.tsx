@@ -20,10 +20,30 @@ export function Contacts() {
     setError('')
 
     try {
-      const res = await fetch('/api/contact', {
+      // Telegram Bot API configuration
+      const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN || 'YOUR_BOT_TOKEN_HERE'
+      const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID || 'YOUR_CHAT_ID_HERE'
+
+      // Format message for Telegram
+      const interestLabels: Record<string, string> = {
+        registration: 'Регистрация компании',
+        license: 'Получение лицензии',
+        account: 'Открытие счёта',
+        consulting: 'Консультация',
+        other: 'Другое',
+      }
+
+      const message = `🔔 *Новая заявка с сайта*\n\n👤 *Имя:* ${formState.name}\n🏢 *Компания:* ${formState.company || 'не указана'}\n📱 *Телефон:* ${formState.phone}\n📧 *Email:* ${formState.email || 'не указан'}\n📋 *Интересует:* ${interestLabels[formState.interest] || 'не выбрано'}\n\n💬 *Сообщение:*\n${formState.message || 'не указано'}`
+
+      // Send to Telegram
+      const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formState),
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: 'Markdown',
+        }),
       })
 
       if (!res.ok) throw new Error('Ошибка отправки')
